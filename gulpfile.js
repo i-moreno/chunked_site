@@ -4,22 +4,22 @@ const sync = require("browser-sync").create();
 
 gulp.task('copy-img', function () {
   return gulp.src('./src/assets/img/**/*.png')
-    .pipe(gulp.dest('./build/img'));
+    .pipe(gulp.dest('./build/assets/img'));
 });
 
 gulp.task('copy-css', function () {
   return gulp.src('./src/assets/css/*.*')
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/assets/css'));
 });
 
 gulp.task('copy-fonts', function () {
   return gulp.src('./src/assets/fonts/*')
-    .pipe(gulp.dest('./build/fonts'))
+    .pipe(gulp.dest('./build/assets/fonts'))
 });
 
 gulp.task('copy-scripts', function () {
-  return gulp.src('./src/assets/js/*')
-    .pipe(gulp.dest('./build/js'))
+  return gulp.src('./src/assets/js/**/*')
+    .pipe(gulp.dest('./build/assets/js'))
 });
 
 gulp.task('copy-scss', function () {
@@ -42,6 +42,10 @@ gulp.task('build', gulp.series(
   'minify'
 ));
 
-gulp.task('watchFiles', () => {
-
+gulp.task('dev-sync', () => {
+  return sync.init({
+    server: {
+      baseDir: './build'
+    }
+  });
 })
