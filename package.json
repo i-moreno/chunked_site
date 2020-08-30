@@ -24,7 +24,11 @@
     "url": "https://github.com/i-moreno/chunked_site/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
   }
 }
