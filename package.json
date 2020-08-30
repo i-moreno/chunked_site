@@ -1,0 +1,32 @@
+{
+  "name": "landing_test",
+  "version": "1.0.0",
+  "description": "Test chunked website",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "start": "webpack-dev-server --config webpack.dev.js --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-moreno/chunked_site.git"
+  },
+  "keywords": [
+    "html",
+    "node",
+    "css",
+    "jamstack"
+  ],
+  "author": "Carlos Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-moreno/chunked_site/issues"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
